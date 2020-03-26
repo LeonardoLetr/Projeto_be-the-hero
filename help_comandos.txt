@@ -1,0 +1,21 @@
+Adicionando Framework para trabalhar com Banco de Dados
+
+npm install knex
+
+npm install sqlite3
+
+npx knex init
+
+Criando Migrations Controle do banco
+
+npx knex migrate:make migration_name
+
+npx knex migrate:latest //executar migration   
+
+npx knex migrate:rollback //voltar a ultima migration executada
+
+npx knex migrate:status //mostra todas as migrations executadas e as que faltam executar
+
+Modulo de segurança
+
+npm install cors
