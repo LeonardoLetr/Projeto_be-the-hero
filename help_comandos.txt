@@ -1,96 +1,98 @@
 Back-end
 
-Adicionando Framework para trabalhar com Banco de Dados
+	Instalar chocolatey
+		Get-ExecutionPolicy
+		Set-ExecutionPolicy AllSigned
+		Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+	
+	Instalar node
+		choco install nodejs-lts
 
-npm install knex
+	Criar projeto node 
+		npm init -y
 
-npm install sqlite3
+	Framework node
+		npm install express
+		npm install nodemon -D
+		
+		Banco de Dados
+			npm install knex
+			npm install sqlite3
+			npx knex init
+	
+		Criando Migrations
+			npx knex migrate:make migration_name
+			npx knex migrate:latest //executar migration   
+			npx knex migrate:rollback //voltar a ultima migration executada
+			npx knex migrate:status //mostra todas as migrations executadas e as que faltam executar
 
-npx knex init
+		Modulo de segurança
+			npm install cors
 
-Criando Migrations Controle do banco
-
-npx knex migrate:make migration_name
-
-npx knex migrate:latest //executar migration   
-
-npx knex migrate:rollback //voltar a ultima migration executada
-
-npx knex migrate:status //mostra todas as migrations executadas e as que faltam executar
-
-Modulo de segurança
-
-npm install cors
-
-Validações
-npm install celebrate
+		Validações
+			npm install celebrate
 
 
 Front-end
+	
+	Criar projeto ReactJS 
+		npx create-react-app frontend
 
-Arquivos para manter no front-end 
+	Arquivos para manter no front-end 
 
-public
-	favicon.icon
-	index.html
+		public
+			favicon.icon
+			index.html
 
-src
-	app.js
-	index.js
+		src
+			app.js
+			index.js
 
-.gitgnore
-package-lock.json
-package.json
+		.gitgnore
+		package-lock.json
+		package.json
 
+	Framework ReactJS
+	
+		Pacote de icons
+			npm install react-icons
 
-Baixar pacote de icons
+		Pacote de Rotas
+			npm install react-router-dom
 
-npm install react-icons
-
-Usar rotas
-
-npm install react-router-dom
-
-Possibilitar chamadas a API e obter respostar
-
-npm install axios
+		Possibilitar chamadas de API
+			npm install axios
 
 Mobile
 
-npm install expo-cli
+	Framework Expo 
+		Set-ExecutionPolicy RemoteSigned
+		npm install expo-cli
 
-Set-ExecutionPolicy RemoteSigned caso der erro no expo
+	Pacote d rotas
+		npm install @react-navigation/native
+		expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view
+		npm install @react-navigation/stack
+		expo install expo-constants
 
-Uso de rotas
+	Mandar Email e Whatsapp
+		expo install expo-mail-composer
 
-npm install @react-navigation/native
+	Possibilitar chamadas de API
+		npm install axios
 
-expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view
+	Pacote do intl
+		npm install intl
 
-npm install @react-navigation/stack
 
-expo install expo-constants
+Teste
+	
+	Framework para Teste
+		npm install jest
+		npx jest --init
 
-Mandar Email e Whatsapp
+	Poder reconhecer se estou em desenv ou test
+		npm install cross-env
 
-expo install expo-mail-composer
-
-Instalar o Axios no mobile para ter acesso a API
-
-npm install axios
-
-Pacote para uso do intl
-
-npm install intl
-
-Framework de Teste
-
-npm install jest
-
-npx jest --init
-
-Poder reconhecer se estou em desenv ou test
-npm install cross-env
-
-Biblioteca para fazer chamadas de get, post no Back-end
-npm install supertest -D // -D dependencia de desenvolvimento
+	Biblioteca para fazer chamadas de get, post no Back-end
+		npm install supertest -D // -D dependencia de desenvolvimento
