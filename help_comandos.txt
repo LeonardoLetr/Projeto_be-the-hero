@@ -19,3 +19,33 @@ npx knex migrate:status //mostra todas as migrations executadas e as que faltam 
 Modulo de segurança
 
 npm install cors
+
+
+Front-end
+
+Arquivos para manter no front-end 
+
+public
+	favicon.icon
+	index.html
+
+src
+	app.js
+	index.js
+
+.gitgnore
+package-lock.json
+package.json
+
+
+Baixar pacote de icons
+
+npm install react-icons
+
+Usar rotas
+
+npm install react-router-dom
+
+Possibilitar chamadas a API e obter respostar
+
+npm install axios
