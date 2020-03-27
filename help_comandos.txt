@@ -22,6 +22,9 @@ Modulo de segurança
 
 npm install cors
 
+Validações
+npm install celebrate
+
 
 Front-end
 
@@ -79,3 +82,15 @@ npm install axios
 Pacote para uso do intl
 
 npm install intl
+
+Framework de Teste
+
+npm install jest
+
+npx jest --init
+
+Poder reconhecer se estou em desenv ou test
+npm install cross-env
+
+Biblioteca para fazer chamadas de get, post no Back-end
+npm install supertest -D // -D dependencia de desenvolvimento
