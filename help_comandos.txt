@@ -1,3 +1,5 @@
+Back-end
+
 Adicionando Framework para trabalhar com Banco de Dados
 
 npm install knex
@@ -49,3 +51,31 @@ npm install react-router-dom
 Possibilitar chamadas a API e obter respostar
 
 npm install axios
+
+Mobile
+
+npm install expo-cli
+
+Set-ExecutionPolicy RemoteSigned caso der erro no expo
+
+Uso de rotas
+
+npm install @react-navigation/native
+
+expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view
+
+npm install @react-navigation/stack
+
+expo install expo-constants
+
+Mandar Email e Whatsapp
+
+expo install expo-mail-composer
+
+Instalar o Axios no mobile para ter acesso a API
+
+npm install axios
+
+Pacote para uso do intl
+
+npm install intl
